@@ -16,12 +16,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-minecraft-dark via-minecraft-gray to-minecraft-brown font-body">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-minecraft-dark/95 backdrop-blur-sm border-b-4 border-minecraft-green">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-minecraft-dark border-b-8 border-minecraft-green shadow-pixel-lg">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-minecraft-brown border-2 border-minecraft-gold" />
-              <h1 className="text-xl md:text-2xl font-minecraft text-minecraft-green">MINECRAFT HOSTING</h1>
+              <div className="w-12 h-12 bg-minecraft-brown border-4 border-minecraft-gold shadow-pixel" />
+              <h1 className="text-xl md:text-2xl font-minecraft text-minecraft-green drop-shadow-lg">MINECRAFT HOSTING</h1>
             </div>
             
             <div className="hidden md:flex items-center gap-3">
@@ -30,14 +30,14 @@ const Index = () => {
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
                   variant="outline"
-                  className="bg-minecraft-gold/10 hover:bg-minecraft-gold border-2 border-minecraft-gold text-white hover:text-minecraft-dark font-semibold text-xs px-4 py-2 transition-all"
+                  className="bg-minecraft-gold/20 hover:bg-minecraft-gold border-4 border-minecraft-gold text-white hover:text-minecraft-dark font-semibold text-xs px-4 py-2 shadow-pixel hover:shadow-pixel-lg transition-all"
                 >
                   {item}
                 </Button>
               ))}
             </div>
 
-            <Button className="bg-minecraft-green hover:bg-minecraft-green/80 text-white font-minecraft text-xs md:text-sm border-2 border-minecraft-gold">
+            <Button className="bg-minecraft-green hover:bg-minecraft-green/90 text-white font-minecraft text-xs md:text-sm border-4 border-black shadow-pixel-lg hover:shadow-pixel">
               ВОЙТИ
             </Button>
           </div>

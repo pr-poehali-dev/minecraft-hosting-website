@@ -73,9 +73,14 @@ export default {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: '0px',
+				md: '0px',
+				sm: '0px'
+			},
+			boxShadow: {
+				'pixel': '4px 4px 0px rgba(0,0,0,0.3)',
+				'pixel-lg': '8px 8px 0px rgba(0,0,0,0.5)',
+				'pixel-gold': '0 0 20px rgba(255,215,0,0.5), 4px 4px 0px rgba(0,0,0,0.3)'
 			},
 			keyframes: {
 				'accordion-down': {
