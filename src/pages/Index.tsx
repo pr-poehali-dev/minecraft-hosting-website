@@ -169,25 +169,33 @@ const Index = () => {
                 storage: '120 GB NVMe',
                 features: ['Всё из Максимальный', 'Выделенный сервер', 'SLA 99.99%', 'Персональный менеджер', 'Приоритет №1'],
                 color: 'minecraft-gold',
-                popular: false
+                popular: false,
+                premium: true
               }
             ].map((plan) => (
               <Card 
                 key={plan.name} 
                 className={`bg-minecraft-dark border-4 ${
-                  plan.popular 
+                  plan.premium
+                    ? 'border-minecraft-gold scale-110 shadow-[0_0_50px_rgba(255,215,0,0.5)] bg-gradient-to-b from-minecraft-gold/20 to-minecraft-dark'
+                    : plan.popular 
                     ? 'border-minecraft-gold scale-105 shadow-2xl' 
                     : 'border-minecraft-green'
                 } relative overflow-hidden hover:scale-105 transition-transform`}
               >
-                {plan.popular && (
+                {plan.premium && (
+                  <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-minecraft-gold via-yellow-400 to-minecraft-gold text-minecraft-dark font-minecraft text-xs px-4 py-2 text-center animate-pulse">
+                    ⭐ PREMIUM ⭐
+                  </div>
+                )}
+                {plan.popular && !plan.premium && (
                   <div className="absolute top-0 right-0 bg-minecraft-gold text-minecraft-dark font-minecraft text-xs px-4 py-2">
                     ПОПУЛЯРНО
                   </div>
                 )}
                 
-                <CardHeader>
-                  <CardTitle className={`text-2xl font-minecraft text-${plan.color} text-center mb-4`}>
+                <CardHeader className={plan.premium ? 'pt-10' : ''}>
+                  <CardTitle className={`text-2xl font-minecraft text-${plan.color} text-center mb-4 ${plan.premium ? 'text-3xl' : ''}`}>
                     {plan.name}
                   </CardTitle>
                   
@@ -206,16 +214,20 @@ const Index = () => {
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2 text-white">
-                        <Icon name="Check" className="text-minecraft-green mt-1 flex-shrink-0" size={16} />
+                        <Icon name={plan.premium ? "Star" : "Check"} className={`${plan.premium ? 'text-minecraft-gold' : 'text-minecraft-green'} mt-1 flex-shrink-0`} size={16} />
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                   
                   <Button 
-                    className={`w-full bg-${plan.color} hover:bg-${plan.color}/80 text-white font-minecraft border-2 border-minecraft-dark`}
+                    className={`w-full ${
+                      plan.premium 
+                        ? 'bg-gradient-to-r from-minecraft-gold to-yellow-500 hover:from-yellow-500 hover:to-minecraft-gold text-minecraft-dark border-4 border-minecraft-gold shadow-lg animate-pulse'
+                        : `bg-${plan.color} hover:bg-${plan.color}/80 text-white border-2 border-minecraft-dark`
+                    } font-minecraft`}
                   >
-                    ВЫБРАТЬ
+                    {plan.premium ? '⭐ ЗАКАЗАТЬ ⭐' : 'ВЫБРАТЬ'}
                   </Button>
                 </CardContent>
               </Card>
