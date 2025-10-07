@@ -387,7 +387,7 @@ const Index = () => {
             КОНТАКТЫ
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
             <Card className="bg-minecraft-dark border-2 border-minecraft-green">
               <CardContent className="pt-6 text-center">
                 <Icon name="Mail" className="mx-auto mb-3 text-minecraft-gold" size={32} />
@@ -409,6 +409,14 @@ const Index = () => {
                 <Icon name="Send" className="mx-auto mb-3 text-minecraft-gold" size={32} />
                 <p className="text-white font-semibold mb-2">Telegram</p>
                 <p className="text-minecraft-green">@mchost_support</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-minecraft-dark border-2 border-minecraft-green hover:border-minecraft-gold transition-all">
+              <CardContent className="pt-6 text-center">
+                <Icon name="Radio" className="mx-auto mb-3 text-minecraft-gold" size={32} />
+                <p className="text-white font-semibold mb-2">Telegram Канал</p>
+                <p className="text-minecraft-green">@luxuryhosting</p>
               </CardContent>
             </Card>
           </div>
