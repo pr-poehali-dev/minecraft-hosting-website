@@ -388,37 +388,45 @@ const Index = () => {
           </h2>
           
           <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
-            <Card className="bg-minecraft-dark border-2 border-minecraft-green">
-              <CardContent className="pt-6 text-center">
-                <Icon name="Mail" className="mx-auto mb-3 text-minecraft-gold" size={32} />
-                <p className="text-white font-semibold mb-2">Email</p>
-                <p className="text-minecraft-green">support@mchost.ru</p>
-              </CardContent>
-            </Card>
+            <a href="mailto:support@mchost.ru" target="_blank" rel="noopener noreferrer">
+              <Card className="bg-minecraft-dark border-2 border-minecraft-green hover:border-minecraft-gold transition-all hover:scale-105 cursor-pointer">
+                <CardContent className="pt-6 text-center">
+                  <Icon name="Mail" className="mx-auto mb-3 text-minecraft-gold" size={32} />
+                  <p className="text-white font-semibold mb-2">Email</p>
+                  <p className="text-minecraft-green">support@mchost.ru</p>
+                </CardContent>
+              </Card>
+            </a>
 
-            <Card className="bg-minecraft-dark border-2 border-minecraft-green">
-              <CardContent className="pt-6 text-center">
-                <Icon name="MessageCircle" className="mx-auto mb-3 text-minecraft-gold" size={32} />
-                <p className="text-white font-semibold mb-2">Discord</p>
-                <p className="text-minecraft-green">discord.gg/mchost</p>
-              </CardContent>
-            </Card>
+            <a href="https://discord.gg/mchost" target="_blank" rel="noopener noreferrer">
+              <Card className="bg-minecraft-dark border-2 border-minecraft-green hover:border-minecraft-gold transition-all hover:scale-105 cursor-pointer">
+                <CardContent className="pt-6 text-center">
+                  <Icon name="MessageCircle" className="mx-auto mb-3 text-minecraft-gold" size={32} />
+                  <p className="text-white font-semibold mb-2">Discord</p>
+                  <p className="text-minecraft-green">discord.gg/mchost</p>
+                </CardContent>
+              </Card>
+            </a>
 
-            <Card className="bg-minecraft-dark border-2 border-minecraft-green">
-              <CardContent className="pt-6 text-center">
-                <Icon name="Send" className="mx-auto mb-3 text-minecraft-gold" size={32} />
-                <p className="text-white font-semibold mb-2">Telegram</p>
-                <p className="text-minecraft-green">@mchost_support</p>
-              </CardContent>
-            </Card>
+            <a href="https://t.me/mchost_support" target="_blank" rel="noopener noreferrer">
+              <Card className="bg-minecraft-dark border-2 border-minecraft-green hover:border-minecraft-gold transition-all hover:scale-105 cursor-pointer">
+                <CardContent className="pt-6 text-center">
+                  <Icon name="Send" className="mx-auto mb-3 text-minecraft-gold" size={32} />
+                  <p className="text-white font-semibold mb-2">Telegram</p>
+                  <p className="text-minecraft-green">@mchost_support</p>
+                </CardContent>
+              </Card>
+            </a>
 
-            <Card className="bg-minecraft-dark border-2 border-minecraft-green hover:border-minecraft-gold transition-all">
-              <CardContent className="pt-6 text-center">
-                <Icon name="Radio" className="mx-auto mb-3 text-minecraft-gold" size={32} />
-                <p className="text-white font-semibold mb-2">Telegram Канал</p>
-                <p className="text-minecraft-green">@luxuryhosting</p>
-              </CardContent>
-            </Card>
+            <a href="https://t.me/luxuryhosting" target="_blank" rel="noopener noreferrer">
+              <Card className="bg-minecraft-dark border-2 border-minecraft-green hover:border-minecraft-gold transition-all hover:scale-105 cursor-pointer">
+                <CardContent className="pt-6 text-center">
+                  <Icon name="Radio" className="mx-auto mb-3 text-minecraft-gold" size={32} />
+                  <p className="text-white font-semibold mb-2">Telegram Канал</p>
+                  <p className="text-minecraft-green">@luxuryhosting</p>
+                </CardContent>
+              </Card>
+            </a>
           </div>
 
           <p className="text-white/60 text-sm">
