@@ -18,7 +18,16 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'minecraft': ['"Press Start 2P"', 'monospace'],
+				'body': ['Roboto', 'sans-serif']
+			},
 			colors: {
+				'minecraft-green': '#00AA00',
+				'minecraft-brown': '#8B4513',
+				'minecraft-gold': '#FFD700',
+				'minecraft-dark': '#1a1a1a',
+				'minecraft-gray': '#4a4a4a',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -84,11 +93,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-20px)' }
+				},
+				'pixel-fade': {
+					'0%': { opacity: '0', transform: 'scale(0.8)' },
+					'100%': { opacity: '1', transform: 'scale(1)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'pixel-fade': 'pixel-fade 0.5s ease-out'
 			}
 		}
 	},
