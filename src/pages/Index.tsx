@@ -114,7 +114,7 @@ const Index = () => {
             ТАРИФЫ
           </h2>
           
-          <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-5 gap-6 max-w-[1600px] mx-auto">
             {[
               {
                 name: 'БАЗОВЫЙ',
@@ -158,6 +158,17 @@ const Index = () => {
                 storage: '60 GB NVMe',
                 features: ['Всё из Продвинутый', 'Бесплатный домен', 'Кастомные плагины', 'Выделенное ядро CPU'],
                 color: 'minecraft-green',
+                popular: false
+              },
+              {
+                name: 'ДРАГОН',
+                price: '2500₽',
+                period: '/месяц',
+                players: 'От 500 игроков',
+                ram: '10 GB RAM',
+                storage: '120 GB NVMe',
+                features: ['Всё из Максимальный', 'Выделенный сервер', 'SLA 99.99%', 'Персональный менеджер', 'Приоритет №1'],
+                color: 'minecraft-gold',
                 popular: false
               }
             ].map((plan) => (
