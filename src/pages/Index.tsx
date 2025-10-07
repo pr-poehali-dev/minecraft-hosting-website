@@ -61,11 +61,11 @@ const Index = () => {
           </h2>
           
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto font-medium">
-            Мощные серверы на NVMe SSD с мгновенным стартом
+            Поддержка Bedrock и Java любой версии
           </p>
           
           <p className="text-lg text-minecraft-gold mb-10 max-w-2xl mx-auto">
-            Более 15 000 серверов уже работают на нашей платформе • Поддержка Java и Bedrock
+            Мощные NVMe серверы с мгновенным стартом • Более 15 000 активных серверов
           </p>
           
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
