@@ -43,48 +43,63 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="главная" className="pt-32 pb-20 px-4">
-        <div className="container mx-auto text-center">
-          <div className="inline-block animate-float mb-8">
-            <div className="w-24 h-24 bg-minecraft-brown border-4 border-minecraft-green mx-auto" />
+      <section id="главная" className="pt-32 pb-20 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-16 h-16 bg-minecraft-green animate-float" />
+          <div className="absolute top-40 right-20 w-12 h-12 bg-minecraft-gold animate-float" style={{animationDelay: '1s'}} />
+          <div className="absolute bottom-40 left-1/4 w-20 h-20 bg-minecraft-brown animate-float" style={{animationDelay: '2s'}} />
+        </div>
+        
+        <div className="container mx-auto text-center relative z-10">
+          <div className="inline-flex items-center gap-3 bg-minecraft-green/20 border-2 border-minecraft-green px-6 py-3 mb-8 animate-pixel-fade">
+            <Icon name="Zap" className="text-minecraft-gold" size={20} />
+            <span className="text-white font-semibold">🔥 Запуск за 15 секунд • NVMe диски • Защита от DDoS</span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-minecraft text-minecraft-green mb-6 animate-pixel-fade">
-            ПОСТРОЙ СВОЙ МИР
+          <h2 className="text-5xl md:text-7xl font-minecraft text-minecraft-green mb-6 animate-pixel-fade leading-tight">
+            #1 ХОСТИНГ<br/>MINECRAFT В РОССИИ
           </h2>
           
-          <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
-            Профессиональный хостинг серверов Minecraft с мгновенным запуском и круглосуточной поддержкой
+          <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto font-medium">
+            Мощные серверы на NVMe SSD с мгновенным стартом
           </p>
           
-          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+          <p className="text-lg text-minecraft-gold mb-10 max-w-2xl mx-auto">
+            Более 15 000 серверов уже работают на нашей платформе • Поддержка Java и Bedrock
+          </p>
+          
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
             <Button 
               onClick={() => scrollToSection('тарифы')}
-              className="bg-minecraft-green hover:bg-minecraft-green/80 text-white font-minecraft text-lg px-8 py-6 border-4 border-minecraft-gold"
+              className="bg-minecraft-green hover:bg-minecraft-green/80 text-white font-minecraft text-xl px-12 py-7 border-4 border-minecraft-gold shadow-2xl hover:shadow-minecraft-gold/50 transition-all hover:scale-105"
             >
-              ВЫБРАТЬ ТАРИФ
+              СОЗДАТЬ СЕРВЕР
             </Button>
             
             <Button 
               variant="outline" 
-              className="bg-transparent border-4 border-white text-white hover:bg-white hover:text-minecraft-dark font-minecraft text-lg px-8 py-6"
+              className="bg-minecraft-gold hover:bg-minecraft-gold/90 border-4 border-minecraft-gold text-minecraft-dark hover:text-minecraft-dark font-minecraft text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all"
             >
-              ПОПРОБОВАТЬ
+              3 ДНЯ БЕСПЛАТНО
             </Button>
           </div>
+          
+          <p className="text-white/60 text-sm mb-16">
+            ⭐ Рейтинг 4.9/5 на основе 3500+ отзывов
+          </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-5xl mx-auto">
             {[
-              { icon: 'Server', label: 'SSD диски', value: '99.9%' },
-              { icon: 'Zap', label: 'Мгновенный старт', value: '30 сек' },
-              { icon: 'Users', label: 'Игроков онлайн', value: '10K+' },
-              { icon: 'Shield', label: 'DDoS защита', value: '24/7' }
+              { icon: 'Rocket', label: 'Запуск сервера', value: '15 СЕК', color: 'minecraft-green' },
+              { icon: 'Activity', label: 'Время работы', value: '99.98%', color: 'minecraft-gold' },
+              { icon: 'Users', label: 'Активных серверов', value: '15K+', color: 'minecraft-brown' },
+              { icon: 'Shield', label: 'DDoS защита', value: '1 TBPS', color: 'minecraft-green' }
             ].map((stat) => (
-              <Card key={stat.label} className="bg-minecraft-dark/80 border-2 border-minecraft-green">
+              <Card key={stat.label} className="bg-minecraft-dark/90 border-4 border-minecraft-green hover:border-minecraft-gold transition-all hover:scale-105 hover:shadow-2xl">
                 <CardContent className="pt-6 text-center">
-                  <Icon name={stat.icon} className="mx-auto mb-3 text-minecraft-gold" size={32} />
-                  <p className="text-2xl font-minecraft text-minecraft-green mb-2">{stat.value}</p>
-                  <p className="text-white text-sm">{stat.label}</p>
+                  <Icon name={stat.icon} className={`mx-auto mb-4 text-${stat.color}`} size={40} />
+                  <p className={`text-3xl font-minecraft text-${stat.color} mb-2`}>{stat.value}</p>
+                  <p className="text-white/80 text-sm font-medium">{stat.label}</p>
                 </CardContent>
               </Card>
             ))}
