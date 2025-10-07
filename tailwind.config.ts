@@ -23,11 +23,11 @@ export default {
 				'body': ['Roboto', 'sans-serif']
 			},
 			colors: {
-				'minecraft-green': '#00AA00',
-				'minecraft-brown': '#8B4513',
+				'minecraft-green': '#FF8C00',
+				'minecraft-brown': '#FF6B00',
 				'minecraft-gold': '#FFD700',
 				'minecraft-dark': '#1a1a1a',
-				'minecraft-gray': '#4a4a4a',
+				'minecraft-gray': '#2d2d2d',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

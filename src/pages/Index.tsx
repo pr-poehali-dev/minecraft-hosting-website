@@ -24,15 +24,16 @@ const Index = () => {
               <h1 className="text-xl md:text-2xl font-minecraft text-minecraft-green">MINECRAFT HOSTING</h1>
             </div>
             
-            <div className="hidden md:flex items-center gap-6">
+            <div className="hidden md:flex items-center gap-3">
               {['Главная', 'Тарифы', 'Возможности', 'FAQ', 'Поддержка', 'Контакты'].map((item) => (
-                <button
+                <Button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-white hover:text-minecraft-gold transition-colors font-medium text-sm"
+                  variant="outline"
+                  className="bg-minecraft-gold/10 hover:bg-minecraft-gold border-2 border-minecraft-gold text-white hover:text-minecraft-dark font-semibold text-xs px-4 py-2 transition-all"
                 >
                   {item}
-                </button>
+                </Button>
               ))}
             </div>
 
