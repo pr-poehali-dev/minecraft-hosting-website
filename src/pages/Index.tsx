@@ -57,7 +57,7 @@ const Index = () => {
           </div>
           
           <h2 className="text-5xl md:text-7xl font-minecraft text-minecraft-green mb-6 animate-pixel-fade leading-tight">
-            #1 ХОСТИНГ<br/>MINECRAFT В РОССИИ
+            САМЫЙ ЛУЧШИЙ<br/>ХОСТИНГ MINECRAFT<br/>ИМЕННО ДЛЯ ТЕБЯ
           </h2>
           
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto font-medium">
