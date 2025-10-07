@@ -98,39 +98,50 @@ const Index = () => {
             ТАРИФЫ
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {[
               {
-                name: 'СТАРТОВЫЙ',
-                price: '199₽',
+                name: 'БАЗОВЫЙ',
+                price: '150₽',
                 period: '/месяц',
-                players: '10 игроков',
-                ram: '2 GB RAM',
-                storage: '10 GB SSD',
-                features: ['DDoS защита', 'Автобэкап', 'FTP доступ', 'Поддержка 24/7'],
+                players: 'До 8 игроков',
+                ram: '1 GB RAM',
+                storage: '5 GB NVMe',
+                features: ['DDoS защита', 'Панель управления', 'Автозапуск', 'Техподдержка'],
                 color: 'minecraft-green',
                 popular: false
               },
               {
-                name: 'ПРОФИ',
-                price: '499₽',
+                name: 'СТАНДАРТ',
+                price: '300₽',
                 period: '/месяц',
-                players: '50 игроков',
-                ram: '4 GB RAM',
-                storage: '30 GB SSD',
-                features: ['Всё из Стартового', 'Приоритетная поддержка', 'Установка модов', 'MySQL база'],
+                players: 'До 20 игроков',
+                ram: '2 GB RAM',
+                storage: '15 GB NVMe',
+                features: ['Всё из Базового', 'FTP доступ', 'Автобэкап каждые 6ч', 'Установка модов'],
                 color: 'minecraft-gold',
                 popular: true
               },
               {
-                name: 'МАКСИМУМ',
-                price: '999₽',
+                name: 'ПРОДВИНУТЫЙ',
+                price: '600₽',
                 period: '/месяц',
-                players: '100+ игроков',
-                ram: '8 GB RAM',
-                storage: '60 GB SSD',
-                features: ['Всё из Профи', 'Выделенный IP', 'Бесплатный домен', 'Приватные плагины'],
+                players: 'До 50 игроков',
+                ram: '4 GB RAM',
+                storage: '30 GB NVMe',
+                features: ['Всё из Стандарт', 'MySQL база данных', 'Приоритет поддержки', 'Выделенный IP'],
                 color: 'minecraft-brown',
+                popular: false
+              },
+              {
+                name: 'МАКСИМАЛЬНЫЙ',
+                price: '1200₽',
+                period: '/месяц',
+                players: 'До 100 игроков',
+                ram: '8 GB RAM',
+                storage: '60 GB NVMe',
+                features: ['Всё из Продвинутый', 'Бесплатный домен', 'Кастомные плагины', 'Выделенное ядро CPU'],
+                color: 'minecraft-green',
                 popular: false
               }
             ].map((plan) => (
